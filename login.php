@@ -14,16 +14,27 @@ $query->execute();
 
 $res = $query->fetch(PDO::FETCH_OBJ);
 
-if ($res) {
-    if ($res->password == $password) {
-        echo "<h1>Welcome User</h1>";
+if ($res) 
+{
+    if ($res->password == $password) 
+    {
+        echo '<script type="text/javascript">'
+        echo 'alert ("Welcome User.")';
+        echo '</script>';
     }
-    else {
-        echo "<h1>wrong username or password</h1>";
+    else 
+    {
+        echo '<script type="text/javascript">':
+        echo 'alert ("Wrong  username or password!")';
+        echo '</script>';
     }
         
-}else {
-    echo "<h1>wrong username or password</h1>";
+}
+else 
+{
+    echo '<script type="text/javascript">':
+    echo 'alert ("Wrong  username or password!")';
+    echo '</script>';
 }  
 
 endif;
